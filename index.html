@@ -1,1 +1,1218 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portal Eviden Visitasi Akreditasi 2026 - SDN 1 Sukahaji</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@700&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            hand: ['"Caveat"', 'cursive'],
+          },
+          colors: {
+            navy: {
+              50: '#f0f4fa',
+              100: '#dce6f5',
+              700: '#0b2b5c',
+              800: '#071f42',
+              900: '#04132a',
+            },
+            gold: {
+              300: '#fcd34d',
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #f4f7fb;
+      color: #1e293b;
+    }
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #e2e8f0;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #0b2b5c;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #f59e0b;
+    }
+    .gold-gradient {
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    }
+    .navy-gradient {
+      background: linear-gradient(135deg, #0b2b5c 0%, #04132a 100%);
+    }
+    .card-hover {
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .card-hover:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 24px -6px rgba(11, 43, 92, 0.14);
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    mark.highlight {
+      background-color: #fef08a;
+      color: #04132a;
+      padding: 0 2px;
+      border-radius: 3px;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-gold-400 selection:text-navy-900">
+
+  <!-- TOP STICKY NAVBAR -->
+  <header class="sticky top-0 z-50 navy-gradient text-white shadow-lg border-b-4 border-gold-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl gold-gradient flex items-center justify-center text-navy-900 font-extrabold text-lg shadow-md shrink-0">
+          <i class="fa-solid fa-award"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <h1 class="font-extrabold text-sm sm:text-base tracking-tight text-white leading-none">SDN 1 SUKAHAJI</h1>
+            <span class="hidden sm:inline-block text-[10px] font-bold uppercase tracking-wider bg-gold-400 text-navy-900 px-2 py-0.5 rounded-full">BAN-PDM 2026</span>
+          </div>
+          <p class="text-[11px] text-slate-300 mt-0.5 truncate">Portal Eviden Visitasi Akreditasi • 21–22 Oktober 2026</p>
+        </div>
+      </div>
+
+      <!-- Progress Tracker Ringkas di Navbar -->
+      <div class="flex items-center gap-3">
+        <div class="hidden md:flex flex-col items-end">
+          <div class="flex items-center gap-2 text-xs font-semibold">
+            <span class="text-gold-300"><i class="fa-solid fa-circle-check mr-1"></i>Progres Telaah Asesor:</span>
+            <span id="navProgressText" class="text-white font-bold">0 / 43 Indikator (0%)</span>
+          </div>
+          <div class="w-44 h-2 bg-navy-900 rounded-full overflow-hidden mt-1 border border-white/15">
+            <div id="navProgressBar" class="h-full gold-gradient transition-all duration-300" style="width: 0%"></div>
+          </div>
+        </div>
+        <a href="#instrumen-section" class="gold-gradient text-navy-900 hover:brightness-105 font-bold text-xs sm:text-sm px-3.5 py-2 rounded-xl shadow transition flex items-center gap-1.5 shrink-0">
+          <i class="fa-solid fa-folder-tree"></i>
+          <span>Eksplor Eviden</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO BANNER & WELCOME SECTION -->
+  <section class="relative overflow-hidden bg-navy-900 text-white pb-10 pt-6">
+    <!-- Ornamen Geometris Tema Banner -->
+    <div class="absolute top-0 left-0 w-72 h-72 bg-gold-400/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Gambar Banner Asli dari Folder assets/hero-bg.jpeg -->
+      <div class="rounded-2xl overflow-hidden shadow-2xl border-2 border-gold-400/70 bg-navy-800 mb-8">
+        <img 
+          src="assets/hero-bg.jpeg" 
+          onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/sdn1sukahaji/akreditasi2026/main/assets/hero-bg.jpeg';"
+          alt="Banner Selamat Datang Tim Asesor BAN-PDM di SDN 1 Sukahaji" 
+          class="w-full h-auto object-cover block"
+        />
+      </div>
+
+      <!-- KARTU SAPAAN OPTIMISTIS & POSITIF KEPADA KEDUA ASESOR -->
+      <div class="bg-white/95 backdrop-blur text-slate-800 rounded-2xl shadow-xl border-t-4 border-gold-400 p-6 sm:p-8 lg:p-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Kolom Sapaan Hangat (7 Kolom) -->
+          <div class="lg:col-span-7 space-y-4">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-navy-50 border border-navy-100 text-navy-700 text-xs font-extrabold uppercase tracking-wider">
+              <span class="w-2 h-2 rounded-full bg-gold-500 animate-ping"></span>
+              <span>Sambutan Hangat & Penuh Optimisme</span>
+              <span class="font-hand text-base text-gold-600 normal-case ml-1">"We are the best!"</span>
+            </div>
+
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-navy-800 leading-tight">
+              Selamat Datang Tim Asesor BAN-PDM di <span class="text-gold-600 underline decoration-gold-400 decoration-4 underline-offset-4">SDN 1 Sukahaji</span>
+            </h2>
+
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+              Dengan penuh rasa syukur, kebanggaan, dan semangat kebersamaan, keluarga besar <strong>SDN 1 Sukahaji, Kecamatan Cihaurbeuti, Kabupaten Ciamis</strong> menyambut kehadiran <strong>Bapak Asep Sukardi, M.Ag.</strong> dan <strong>Ibu Nunung Herlina, S.Pd., M.Pd.</strong> pada pelaksanaan Visitasi Akreditasi tanggal <strong>21–22 Oktober 2026</strong>.
+            </p>
+
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+              Bagi kami, momentum visitasi ini bukan sekadar proses pemotretan mutu, melainkan ruang kolaborasi, silaturahmi, dan inspirasi yang sangat berharga untuk terus bertumbuh menghadirkan layanan pendidikan yang berpusat pada peserta didik. Semoga portal digital ini memberikan kemudahan, kenyamanan, dan kelancaran bagi Bapak dan Ibu Asesor dalam menelaah seluruh dokumen eviden kami.
+            </p>
+
+            <div class="pt-2 flex flex-wrap items-center gap-3 text-xs font-semibold text-navy-700">
+              <div class="flex items-center gap-2 bg-navy-50 px-3.5 py-2 rounded-xl border border-navy-100">
+                <i class="fa-solid fa-location-dot text-gold-500"></i>
+                <span>Jl. Raya Cihaurbeuti No.86 Desa Sukahaji, Kec. Cihaurbeuti, Kab. Ciamis</span>
+              </div>
+              <div class="flex items-center gap-2 bg-amber-50 px-3.5 py-2 rounded-xl border border-amber-200 text-amber-900">
+                <i class="fa-solid fa-calendar-check text-gold-600"></i>
+                <span>21–22 Oktober 2026</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kolom Kartu Tim Asesor & Kepala Sekolah (5 Kolom) -->
+          <div class="lg:col-span-5 space-y-4">
+            <!-- Box Tim Asesor -->
+            <div class="navy-gradient text-white rounded-2xl p-5 shadow-lg border border-gold-400/40 relative overflow-hidden">
+              <div class="absolute -right-6 -top-6 w-24 h-24 bg-gold-400/15 rounded-full"></div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-extrabold uppercase tracking-wider text-gold-400 flex items-center gap-1.5">
+                  <i class="fa-solid fa-user-shield"></i> Tim Asesor BAN-PDM
+                </span>
+                <span class="text-[11px] bg-white/10 px-2.5 py-0.5 rounded-full text-slate-200">Visitasi 2026</span>
+              </div>
+
+              <div class="space-y-3">
+                <div class="flex items-center gap-3.5 bg-white/10 hover:bg-white/15 transition p-3 rounded-xl border border-white/10">
+                  <div class="w-11 h-11 rounded-xl gold-gradient text-navy-900 font-extrabold flex items-center justify-center text-base shrink-0 shadow">
+                    AS
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-sm sm:text-base text-white">Asep Sukardi, M.Ag.</h3>
+                    <p class="text-xs text-gold-300">Asesor BAN-PDM</p>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-3.5 bg-white/10 hover:bg-white/15 transition p-3 rounded-xl border border-white/10">
+                  <div class="w-11 h-11 rounded-xl gold-gradient text-navy-900 font-extrabold flex items-center justify-center text-base shrink-0 shadow">
+                    NH
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-sm sm:text-base text-white">Nunung Herlina, S.Pd., M.Pd</h3>
+                    <p class="text-xs text-gold-300">Asesor BAN-PDM</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Box Kepala Sekolah -->
+            <div class="bg-gradient-to-r from-amber-50 to-yellow-50 rounded-2xl p-4 border-2 border-gold-400 shadow-sm flex items-center gap-3.5">
+              <div class="w-12 h-12 rounded-xl bg-navy-800 text-gold-400 font-extrabold flex items-center justify-center text-lg shrink-0 shadow">
+                <i class="fa-solid fa-school-flag"></i>
+              </div>
+              <div>
+                <span class="text-[11px] font-extrabold uppercase tracking-wider text-amber-800 block">Kepala Sekolah SDN 1 Sukahaji</span>
+                <h3 class="font-extrabold text-sm sm:text-base text-navy-900">Iis Gustini Ratna Nengsih, S.Pd.SD.</h3>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- RINGKASAN STATISTIK DATA INSTRUMEN -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mt-6">
+        <div class="bg-navy-800/90 border border-white/10 rounded-xl p-4 flex items-center gap-3.5">
+          <div class="w-11 h-11 rounded-xl bg-gold-400/20 text-gold-400 flex items-center justify-center text-lg shrink-0">
+            <i class="fa-solid fa-layer-group"></i>
+          </div>
+          <div>
+            <div class="text-xl sm:text-2xl font-extrabold text-white">14 Butir</div>
+            <div class="text-xs text-slate-300">Instrumen Akreditasi</div>
+          </div>
+        </div>
+
+        <div class="bg-navy-800/90 border border-white/10 rounded-xl p-4 flex items-center gap-3.5">
+          <div class="w-11 h-11 rounded-xl bg-emerald-400/20 text-emerald-400 flex items-center justify-center text-lg shrink-0">
+            <i class="fa-solid fa-list-check"></i>
+          </div>
+          <div>
+            <div class="text-xl sm:text-2xl font-extrabold text-white">43 Indikator</div>
+            <div class="text-xs text-slate-300">Data Penggalian Visitasi</div>
+          </div>
+        </div>
+
+        <div class="bg-navy-800/90 border border-white/10 rounded-xl p-4 flex items-center gap-3.5">
+          <div class="w-11 h-11 rounded-xl bg-sky-400/20 text-sky-400 flex items-center justify-center text-lg shrink-0">
+            <i class="fa-brands fa-google-drive"></i>
+          </div>
+          <div>
+            <div class="text-xl sm:text-2xl font-extrabold text-white">43 Folder</div>
+            <div class="text-xs text-slate-300">Tautan Eviden Siap Akses</div>
+          </div>
+        </div>
+
+        <div class="bg-navy-800/90 border border-white/10 rounded-xl p-4 flex items-center gap-3.5">
+          <div class="w-11 h-11 rounded-xl bg-purple-400/20 text-purple-300 flex items-center justify-center text-lg shrink-0">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <div>
+            <div id="statCheckedCount" class="text-xl sm:text-2xl font-extrabold text-gold-400">0 Selesai</div>
+            <div class="text-xs text-slate-300">Ditandai Sudah Ditelaah</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT: FILTER, SEARCH & DAFTAR EVIDEN -->
+  <main id="instrumen-section" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    
+    <!-- PANEL KONTROL PENCARIAN & FILTER (STICKY SUB-BAR) -->
+    <div class="bg-white rounded-2xl shadow-md border border-slate-200 p-4 sm:p-6 mb-8">
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-4">
+        <div>
+          <h2 class="text-lg sm:text-xl font-extrabold text-navy-800 flex items-center gap-2">
+            <i class="fa-solid fa-magnifying-glass-chart text-gold-500"></i>
+            <span>PENGGALIAN DATA SDN 1 SUKAHAJI KAB. CIAMIS</span>
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-500 mt-0.5">
+            Klik tombol <strong>"Buka Folder Eviden"</strong> pada setiap indikator untuk menuju langsung ke Google Drive dokumen terkait.
+          </p>
+        </div>
+
+        <!-- Tombol Aksi Cepat -->
+        <div class="flex flex-wrap items-center gap-2">
+          <button onclick="toggleAllButir(true)" class="text-xs font-bold px-3 py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition flex items-center gap-1.5">
+            <i class="fa-solid fa-angles-down text-navy-700"></i> Buka Semua Butir
+          </button>
+          <button onclick="toggleAllButir(false)" class="text-xs font-bold px-3 py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition flex items-center gap-1.5">
+            <i class="fa-solid fa-angles-up text-navy-700"></i> Tutup Semua Butir
+          </button>
+          <button onclick="resetChecklist()" class="text-xs font-bold px-3 py-2 rounded-lg bg-rose-50 hover:bg-rose-100 text-rose-700 transition flex items-center gap-1.5" title="Hapus semua tanda centang telaah">
+            <i class="fa-solid fa-rotate-left"></i> Reset Penanda
+          </button>
+        </div>
+      </div>
+
+      <!-- Input Pencarian & Filter Status -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-3 mb-4">
+        <div class="md:col-span-8 relative">
+          <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+          <input 
+            id="searchInput" 
+            type="text" 
+            placeholder="Ketik kata kunci pencarian (contoh: KOSP, ARKAS, TPPK, P3K, Kombel, Inklusif, Rapor Pendidikan)..." 
+            class="w-full pl-11 pr-10 py-3 rounded-xl border border-slate-300 focus:border-navy-700 focus:ring-2 focus:ring-navy-700/20 outline-none text-sm transition"
+          />
+          <button id="clearSearchBtn" onclick="clearSearch()" class="hidden absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600">
+            <i class="fa-solid fa-circle-xmark text-lg"></i>
+          </button>
+        </div>
+
+        <div class="md:col-span-4">
+          <select id="statusFilter" onchange="renderData()" class="w-full py-3 px-4 rounded-xl border border-slate-300 focus:border-navy-700 focus:ring-2 focus:ring-navy-700/20 outline-none text-sm font-semibold text-slate-700 bg-white">
+            <option value="all">Semua Status Indikator (43)</option>
+            <option value="unchecked">Belum Ditelaah</option>
+            <option value="checked">Sudah Ditelaah (Dicentang)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Navigasi Pil Butir 1 s.d. 14 -->
+      <div>
+        <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2 flex items-center justify-between">
+          <span>Filter Cepat Per Butir:</span>
+          <span id="resultCounter" class="text-navy-700 font-extrabold">Menampilkan 14 Butir (43 Indikator)</span>
+        </div>
+        <div id="butirPillsContainer" class="flex items-center gap-1.5 overflow-x-auto pb-2 no-scrollbar">
+          <!-- Diisi via JavaScript -->
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTAINER DAFTAR BUTIR & INDIKATOR -->
+    <div id="butirContainer" class="space-y-8">
+      <!-- Diisi via JavaScript -->
+    </div>
+
+    <!-- TAMPILAN JIKA PENCARIAN TIDAK DITEMUKAN -->
+    <div id="emptyState" class="hidden bg-white rounded-2xl p-12 text-center border border-slate-200 shadow-sm">
+      <div class="w-16 h-16 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center text-2xl mx-auto mb-4">
+        <i class="fa-solid fa-folder-open"></i>
+      </div>
+      <h3 class="text-lg font-extrabold text-navy-800 mb-1">Data Indikator Tidak Ditemukan</h3>
+      <p class="text-sm text-slate-500 max-w-md mx-auto mb-5">
+        Tidak ada Butir atau Indikator yang cocok dengan kata kunci atau filter yang Anda pilih.
+      </p>
+      <button onclick="resetAllFilters()" class="gold-gradient text-navy-900 font-bold text-sm px-5 py-2.5 rounded-xl shadow hover:brightness-105 transition">
+        Tampilkan Semua Data Eviden
+      </button>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="navy-gradient text-white border-t-4 border-gold-400 mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+        <div>
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-9 h-9 rounded-xl gold-gradient text-navy-900 font-extrabold flex items-center justify-center">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <span class="font-extrabold text-lg tracking-tight">SDN 1 SUKAHAJI</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Jl. Raya Cihaurbeuti No.86 Desa Sukahaji, Kecamatan Cihaurbeuti, Kabupaten Ciamis, Provinsi Jawa Barat.
+          </p>
+        </div>
+
+        <div class="text-left md:text-center">
+          <div class="inline-block bg-white/10 border border-white/15 rounded-xl px-4 py-2.5">
+            <p class="text-xs text-gold-300 font-bold uppercase tracking-wider">Visitasi Akreditasi BAN-PDM</p>
+            <p class="text-sm font-extrabold text-white mt-0.5">21 – 22 Oktober 2026</p>
+          </div>
+        </div>
+
+        <div class="text-left md:text-right">
+          <p class="font-hand text-2xl text-gold-400">"We are the best!"</p>
+          <p class="text-xs text-slate-400 mt-1">
+            Portal Digital Eviden Akreditasi • SDN 1 Sukahaji Ciamis
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- TOMBOL KEMBALI KE ATAS -->
+  <button 
+    id="backToTopBtn" 
+    onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+    class="fixed bottom-6 right-6 z-40 hidden w-12 h-12 rounded-2xl navy-gradient text-gold-400 border-2 border-gold-400 shadow-xl items-center justify-center hover:scale-105 transition"
+    title="Kembali ke atas"
+  >
+    <i class="fa-solid fa-arrow-up text-lg"></i>
+  </button>
+
+  <!-- DATA & SCRIPT UTAMA (100% VERBATIM SESUAI DOKUMEN ASESOR) -->
+  <script>
+    const accreditationData = [
+      {
+        butirNumber: 1,
+        butirTitle: "Butir 1.",
+        butirDesc: "Pendidik menyediakan dukungan sosial emosional bagi peserta didik dalam proses pembelajaran.",
+        indicators: [
+          {
+            id: "1.1",
+            indikator: "Interaksi pendidik dengan murid yang setara dan menghargai",
+            data: `Observasi: 
+      Pelaksanaan kegiatan penyambutan 5S dan Embun Pagi, serta suasana interaksi guru-murid saat proses pembelajaran di kelas. 
+Wawancara Murid: Pemahaman dan kenyamanan murid terkait keterbukaan dan rasa dihargai oleh guru.
+Wawancara Guru: Pemahaman guru mengenai teknik mengenali kesiapan emosional siswa.
+Penelaahan Dokumen: Rapor Pendidikan (indikator Dukungan Psikologis & Wellbeing) dan RPP/Modul Ajar yang memuat pendekatan Deep Learning.`,
+            driveUrl: "https://drive.google.com/drive/folders/12zO6WtrVvcjdmKTvVQUN1G1UKBfcpv20?usp=drive_link"
+          },
+          {
+            id: "1.2",
+            indikator: "Interaksi yang membangun pola pikir bertumbuh",
+            data: `Observasi: Pemberian umpan balik (feedback) oleh guru saat mengajar dan respons murid terhadap kegagalan/kesulitan belajar.
+Wawancara Murid: Motivasi belajar dan persepsi murid saat menerima koreksi/arahan dari guru.
+Wawancara Guru: Penerapan strategi pemberian umpan balik konstruktif.
+Penelaahan Dokumen: Hasil instrumen asesmen diagnostik awal dan catatan hasil umpan balik dalam dokumen asesmen/RPP.`,
+            driveUrl: "https://drive.google.com/drive/folders/1_vMxS1TI1uu-CnWTYc78_f941ZgyE9BT?usp=drive_link"
+          },
+          {
+            id: "1.3",
+            indikator: "Memberi perhatian dan bantuan pada murid yang membutuhkan dukungan lebih/ekstra",
+            data: `Observasi: Pelaksanaan pembelajaran terdiferensiasi di kelas dan bantuan individual yang diberikan pendidik.
+Wawancara Guru: Mekanisme penanganan dan identifikasi murid yang membutuhkan bantuan ekstra.
+Wawancara Orang Tua: Efektivitas komunikasi melalui buku penghubung/grup WhatsApp mengenai perkembangan anak.
+Penelaahan Dokumen: Jurnal pendampingan individual, contoh diferensiasi tugas, serta sampel buku penghubung / rekam percakapan grup WA.`,
+            driveUrl: "https://drive.google.com/drive/folders/1Vw5CxsB-9F61ISfgPrqlJmr8I6VISofj?usp=drive_link"
+          },
+          {
+            id: "1.4",
+            indikator: "Strategi pengajaran yang membangun keterampilan sosial emosional pada murid",
+            data: `Observasi: Aktivitas kerja kelompok, keterlibatan tutor sebaya, serta sesi refleksi di akhir pembelajaran.
+Wawancara Murid: Pengalaman berkolaborasi dan penerapan nilai silih asih, silih asah, silih asuh.
+Wawancara Guru: Integrasi KSE dan kearifan lokal Sunda dalam perencanaan dan pelaksanaan pengajaran.
+Penelaahan Dokumen: Modul Ajar/RPP yang mencantumkan langkah-langkah kerja kelompok, refleksi, serta integrasi nilai kearifan lokal Sunda.`,
+            driveUrl: "https://drive.google.com/drive/folders/1bPmypjy4mU03541xFxUWBOEmHbck_C9m?usp=drive_link"
+          }
+        ]
+      },
+      {
+        butirNumber: 2,
+        butirTitle: "Butir 2.",
+        butirDesc: "Pendidik mengelola kelas untuk menciptakan suasana belajar yang aman, nyaman, dan mendukung tercapainya tujuan pembelajaran.",
+        indicators: [
+          {
+            id: "2.1",
+            indikator: "Kesepakatan kelas yang disusun secara partisipatif",
+            data: `Observasi: Ketersediaan dan keterpajangan papan Kesepakatan Kelas di kelas I–VI, serta kepatuhan murid dan pendidik terhadap kesepakatan tersebut selama proses pembelajaran.
+Wawancara Murid: Keterlibatan dan peran aktif murid dalam proses penyusunan kesepakatan kelas serta pemahaman mereka terhadap aturan yang disepakati. 
+Wawancara Guru: Proses fasilitasi guru dalam penyusunan dan mekanisme evaluasi berkala kesepakatan kelas.
+Penelaahan Dokumen: Dokumentasi/foto proses penyusunan kesepakatan kelas, sampel dokumen kesepakatan kelas, dan catatan evaluasi berkala.`,
+            driveUrl: "https://drive.google.com/drive/folders/1N7Jm14ks74PpnEo1x1i1YTlGbhYyf-7q?usp=drive_link"
+          },
+          {
+            id: "2.2",
+            indikator: "Penegakan disiplin dengan pendekatan positif",
+            data: `Observasi: Penanganan guru terhadap dinamika atau pelanggaran di kelas menggunakan restitusi/pendekatan positif tanpa ada bentuk hukuman fisik atau verbal.
+Wawancara Murid: Pengalaman dan perasaan murid saat melakukan kesalahan, serta perlakuan guru dalam memberikan pembinaan/restitusi.
+Wawancara Guru: Pemahaman dan penerapan alur dialog restitusi serta pengelolaan disiplin positif di kelas.
+Penelaahan Dokumen: Rapor Pendidikan (indikator Manajemen Kelas & Keamanan dari Hukuman Fisik) serta catatan pembinaan/jurnal restitusi siswa.`,
+            driveUrl: "https://drive.google.com/drive/folders/1tY76_bGmTT7jCOunuTFEgiTqLCH8cmXZ?usp=drive_link"
+          },
+          {
+            id: "2.3",
+            indikator: "Waktu di kelas terfokus pada kegiatan belajar",
+            data: `Observasi: Ketepatan alokasi waktu pengajaran (pendahuluan, inti, penutup), penataan ruang kelas yang fleksibel, penyampaian tujuan belajar, dan penggunaan media interaktif (Chromebook, IFP, TV Digital, alat peraga). 
+Wawancara Murid: Persepsi murid mengenai kejelasan instruksi guru, penyampaian tujuan belajar, dan pemanfaatan sarana pembelajaran.
+Wawancara Guru: Strategi guru dalam alokasi pengelolaan waktu mengajar (1 JP = 35 menit) dan integrasi media pembelajaran.
+Penelaahan Dokumen: RPP/Modul Ajar (terutama alokasi waktu dan skenario penggunaan media/sumber belajar), serta jadwal pelajaran.`,
+            driveUrl: "https://drive.google.com/drive/folders/1xpiSY2SAsPgBArJujbIALE9AeyhAf6mp?usp=drive_link"
+          }
+        ]
+      },
+      {
+        butirNumber: 3,
+        butirTitle: "Butir 3.",
+        butirDesc: "Pendidik mengelola proses pembelajaran secara efektif dan bermakna.",
+        indicators: [
+          {
+            id: "3.1",
+            indikator: "Perencanaan yang memadai untuk mendukung pelaksanaan pembelajaran.",
+            data: `Observasi: Kesesuaian pelaksanaan pembelajaran di kelas dengan perencanaan yang telah dibuat dalam Modul Ajar/RPP.
+Wawancara Guru: Proses penyusunan perencanaan pembelajaran, pengintegrasian potensi lokal, dan penggunaan perangkat teknologi.
+Penelaahan Dokumen: Dokumen Rencana Kerja Tahunan (RKT 2026), Kurikulum Operasional Satuan Pendidikan (KOSP), ATP, serta sampel Modul Ajar/RPP guru.`,
+            driveUrl: "https://drive.google.com/drive/folders/1NMJlV6GIt6hB3enCM0tSvM5OyhtjLKrE?usp=drive_link"
+          },
+          {
+            id: "3.2",
+            indikator: "Penilaian formatif digunakan sebagai umpan balik dalam proses pembelajaran",
+            data: `Observasi: Praktik guru dalam memberikan asesmen formatif dan umpan balik langsung kepada murid selama proses pembelajaran berlangsung.
+Wawancara Murid: Pengalaman murid dalam menerima umpan balik dari guru dan bagaimana mereka menggunakannya untuk memperbaiki pemahaman.
+Wawancara Guru: 
+Strategi pengolahan hasil asesmen formatif sebagai bahan refleksi dan umpan balik perbaikan pembelajaran.
+Penelaahan Dokumen: Catatan/jurnal penilaian formatif dan dokumentasi umpan balik tertulis/lisan kepada murid.`,
+            driveUrl: "https://drive.google.com/drive/folders/1YWdIw1XtQkZNk_9JgPbb4B1z_wrd0AxT?usp=drive_link"
+          },
+          {
+            id: "3.3",
+            indikator: "Penilaian sumatif dilakukan dengan metode yang beragam menggunakan instrumen yang sesuai dengan tujuan pembelajaran.",
+            data: `Wawancara Guru: Pertimbangan dalam memilih ragam metode dan instrumen penilaian sumatif yang digunakan.
+Penelaahan Dokumen: Kisi-kisi soal, instrumen penilaian sumatif (tes tertulis, produk proyek, unjuk kerja), serta rubrik penilaian yang digunakan oleh pendidik.`,
+            driveUrl: "https://drive.google.com/drive/folders/1WyZ78-srx1XPxAt6YiPH8bONtA-gaVGl?usp=drive_link"
+          },
+          {
+            id: "3.4",
+            indikator: "Hasil penilaian dilaporkan secara informatif untuk mendorong tindak lanjut perbaikan.",
+            data: `Wawancara Orang Tua: Kejelasan informasi perkembangan hasil belajar anak yang diterima melalui pelaporan sekolah (e-Rapor).
+Wawancara Guru: Tindak lanjut konkrit yang diberikan kepada murid berdasarkan hasil laporan penilaian (program remedial dan pengayaan).
+Penelaahan Dokumen: Dokumen rekapitulasi hasil analisis asesmen, laporan e-Rapor, serta program pelaksanaan remedial dan pengayaan.`,
+            driveUrl: "https://drive.google.com/drive/folders/1VmSBrABLa0iOsHhexT4WIk9FINhNLjuc?usp=drive_link"
+          },
+          {
+            id: "3.5",
+            indikator: "Praktik pengajaran yang memfasilitasi murid untuk menganalisis, mengutarakan gagasan, dan menghubungkan pengetahuannya dengan pengetahuan baru dan konteks aplikatif",
+            data: `Observasi: Proses pembelajaran di kelas yang mendorong siswa berpikir tingkat tinggi (analisis), berdiskusi/mengutarakan gagasan, dan mengaitkan materi dengan konteks dunia nyata.
+Wawancara Murid: Pengalaman belajar dalam menyampaikan pendapat, menyelesaikan masalah kontekstual, dan melakukan investigasi mandiri/kelompok.
+Wawancara Guru: Penerapan skenario pembelajaran berbasis PBL/PjBL/Inquiry dalam melatih kemampuan analisis siswa.
+Penelaahan Dokumen: Modul Ajar/RPP yang memuat langkah-langkah aktivitas HOTS, lembar kerja peserta didik (LKPD) berbasis pemecahan masalah, serta dokumentasi hasil karya/projek murid.`,
+            driveUrl: "https://drive.google.com/drive/folders/1d8gkpbM8U4yKM5fVjxfOkgcW5YDPqUuH?usp=drive_link"
+          }
+        ]
+      },
+      {
+        butirNumber: 4,
+        butirTitle: "Butir 4.",
+        butirDesc: "Pendidik memfasilitasi pembelajaran yang efektif dalam membangun keimanan, ketakwaan, komitmen kebangsaan, kemampuan bernalar dan memecahkan masalah, serta karakter dan kompetensi lainnya yang relevan bagi peserta didik.",
+        indicators: [
+          {
+            id: "4.1",
+            indikator: "Pembelajaran yang efektif menguatkan keimanan dan ketakwaan murid pada Tuhan YME untuk membentuk akhlak yang mulia.",
+            data: `Observasi: Pelaksanaan kegiatan keagamaan pembiasaan (seperti Salat Dhuha atau tadarus) dan integrasi nilai akhlak mulia dalam pembelajaran di kelas. 
+Wawancara Murid: Pemahaman dan pengalaman murid dalam mengikuti pembiasaan keagamaan di sekolah. 
+Wawancara Guru/Pembina: Peran guru dalam mengintegrasikan nilai keimanan dan ketakwaan di luar maupun di dalam jam pelajaran. 
+Penelaahan Dokumen: Program kerja kegiatan keagamaan, dokumentasi foto/video kegiatan (PHBI, baksos, ekskul BTQ/kaligrafi), serta jadwal pembiasaan harian/mingguan.`,
+            driveUrl: "https://drive.google.com/drive/folders/1bBZkrE9gDwA1D5Tjmk2GR2NB6CaEGAGu?usp=drive_link"
+          },
+          {
+            id: "4.2",
+            indikator: "Pembelajaran yang efektif dalam menguatkan kecintaan terhadap sejarah, kekayaan budaya, alam Indonesia, pemikiran, dan karya anak bangsa",
+            data: `Observasi: Pelaksanaan upacara, penggunaan bahasa daerah/nasional yang relevan, serta implementasi Muatan Lokal Bahasa Sunda atau permainan tradisional (kaulinan barudak).
+Wawancara Murid: Kebanggaan murid terhadap budaya lokal Sunda dan wawasan kebangsaan mereka.
+Wawancara Guru: Strategi menanamkan nilai nasionalisme dan pelestarian budaya lokal dalam proses pembelajaran.
+Penelaahan Dokumen: Perangkat pembelajaran Mulok Bahasa Sunda, dokumentasi kegiatan upacara/kesenian, serta laporan kegiatan kebudayaan sekolah.`,
+            driveUrl: "https://drive.google.com/drive/folders/1-hYhfEbCCN_lAxAdOe7nYeIXepz2mKIM?usp=drive_link"
+          },
+          {
+            id: "4.3",
+            indikator: "Pembelajaran yang efektif dalam memfasilitasi murid untuk mengembangkan kemampuan bernalar dan memecahkan masalah",
+            data: `Observasi: Proses pembelajaran kokurikuler/intrakurikuler yang melatih nalar kritis (diskusi pemecahan masalah, eksperimen, atau proyek kelompok). 
+Wawancara Murid: Pengalaman mereka dalam mengerjakan proyek kelas dan cara mereka menyelesaikan tantangan/masalah dalam tugas. 
+Wawancara Guru: Desain pembelajaran berbasis PjBL dan efektivitasnya dalam menstimulasi nalar kritis dan kreativitas siswa.
+Penelaahan Dokumen: Modul/perencanaan projek "Projek Anak Hebat", dokumentasi hasil karya siswa, serta portofolio kegiatan literasi dan pameran kelas.`,
+            driveUrl: "https://drive.google.com/drive/folders/1V_X4UAO5WWG2vWnXq2Pt6OoajsSYLBV7?usp=drive_link"
+          },
+          {
+            id: "4.4",
+            indikator: "Pembelajaran yang efektif dalam membangun kompetensi dan/atau karakter yang menjadi misi utama sekolah/madrasah",
+            data: `Observasi: Pelaksanaan kegiatan ekstrakurikuler (Pramuka, seni, olahraga) dan interaksi sosial antarsiswa yang mencerminkan kemandirian serta gotong royong. 
+Wawancara Kepala Sekolah/Guru: Penyelarasan visi misi satuan pendidikan dengan program pengembangan karakter harian. 
+Wawancara Orang Tua: Perubahan positif pada karakter dan kompetensi anak selama belajar di sekolah.
+Penelaahan Dokumen: Dokumen Kurikulum Operasional Satuan Pendidikan (KOSP/Visi-Misi sekolah), laporan kegiatan ekstrakurikuler, serta rekapitulasi pencapaian dimensi karakter.`,
+            driveUrl: "https://drive.google.com/drive/folders/1Xv_Y_hNRG4ZvCEOBQqOQQf9y393T5Y3Y?usp=drive_link"
+          }
+        ]
+      },
+      {
+        butirNumber: 5,
+        butirTitle: "Butir 5.",
+        butirDesc: "Kepala satuan pendidikan menerapkan budaya refleksi untuk perbaikan pembelajaran yang berpusat pada peserta didik, serta evaluasi kinerja untuk rencana pengembangan profesional bagi pendidik dan tenaga kependidikan.",
+        indicators: [
+          {
+            id: "5.1",
+            indikator: "Fasilitasi kepada guru dan tenaga kependidikan untuk melakukan refleksi kinerja dalam rangka perbaikan pembelajaran",
+            data: `Wawancara Kepala Sekolah: Kebijakan dan bentuk fasilitasi yang diberikan kepala sekolah dalam membangun budaya refleksi rutin di satuan pendidikan.
+Wawancara Guru: Pengalaman dan keterlibatan guru dalam kegiatan refleksi kinerja serta Kombel "Sahakarya".
+Penelaahan Dokumen: SK pendirian Kombel "Sahakarya", jadwal rutin kegiatan Kombel/KKG, notula rapat refleksi pembelajaran, serta dokumentasi kegiatan berbagi praktik baik TIK.`,
+            driveUrl: "https://drive.google.com/drive/folders/1Lib2M89Rby1_zW1J1ZwI0l7wCw-1vPu7?usp=drive_link"
+          },
+          {
+            id: "5.2",
+            indikator: "Evaluasi kinerja dilakukan oleh kepsek kepada guru dan tendik dalam rangka meningkatkan kualitas pembelajaran yang dilakukan secara berkala dan sistematis",
+            data: `Wawancara Kepala Sekolah: Mekanisme, jadwal, dan instrumen yang digunakan dalam pelaksanaan supervisi akademik serta evaluasi kinerja guru dan tendik.
+Wawancara Guru: Tanggapan dan pemanfaatan hasil supervisi akademik bulanan serta dialog tindak lanjut untuk perbaikan pembelajaran.
+Penelaahan Dokumen: Program kerja supervisi akademik, jadwal supervisi, instrumen penilaian/observasi kelas oleh kepala sekolah, serta catatan hasil dialog tindak lanjut/mentoring.`,
+            driveUrl: "https://drive.google.com/drive/folders/1rp3FSglFL8yjYsp3uJJ_YFPpEXJyQUj-?usp=drive_link"
+          },
+          {
+            id: "5.3",
+            indikator: `Program pengembangan profesional guru untuk peningkatan kualitas pembelajaran telah dilakukan
+Catatan untuk Indikator 2.5.3: 
+Menimbang ragamnya jenis tenaga kependidikan yang ada di sekolah/madrasah, indikator kinerja ini hanya mengukur pelaksanaan pengembangan kompetensi pada guru.`,
+            data: `Wawancara Guru: Jenis pelatihan atau peningkatan kompetensi yang telah diikuti (misalnya melalui PMM/IHT) dan dampaknya terhadap praktik mengajar.
+Penelaahan Dokumen: Rencana Kerja Tahunan / Rencana Kegiatan dan Anggaran Sekolah (RKT-RKAS 2026) terkait anggaran pengembangan kompetensi, sertifikat pelatihan guru, laporan pelaksanaan IHT/workshop, serta rekap keaktifan guru di Platform Merdeka Mengajar (PMM).`,
+            driveUrl: "https://drive.google.com/drive/folders/1QLGM-_3YMz5X5aXajdlUEVchNPi1oWQa?usp=drive_link"
+          },
+          {
+            id: "5.4",
+            indikator: "Pengelolaan guru dan tenaga kependidikan yang efektif dan dan akuntabel dalam hal pemberian kompensasi, penghargaan atau sanksi berbasis kinerja",
+            data: `Wawancara Kepala Sekolah: Kebijakan dan mekanisme pemberian penghargaan (reward) atau bentuk apresiasi kinerja kepada pendidik dan tenaga kependidikan.
+Wawancara Guru & Tendik: Persepsi tenaga pendidik dan kependidikan terhadap keadilan, transparansi, serta objektivitas pengelolaan kinerja di sekolah.
+Penelaahan Dokumen: Dokumen penilaian kinerja pendidik dan tendik, SOP pengelolaan SDM, serta dokumentasi pemberian penghargaan/apresiasi satuan pendidikan.`,
+            driveUrl: "https://drive.google.com/drive/folders/1Wa8dWvVGSyd-fvU5_h0Z1MSLA_HElihp?usp=drive_link"
+          }
+        ]
+      },
+      {
+        butirNumber: 6,
+        butirTitle: "Butir 6.",
+        butirDesc: "Kepala satuan pendidikan menghadirkan layanan belajar yang partisipatif dan kolaboratif untuk tercapainya visi dan misi.",
+        indicators: [
+          {
+            id: "6.1",
+            indikator: "Visi dan misi sekolah/madrasah yang jelas dan dipahami oleh berbagai pemangku kepentingan",
+            data: `Wawancara Kepala Sekolah & Komite: Pemahaman dan proses penyusunan visi-misi sekolah yang melibatkan pemangku kepentingan.
+Wawancara Orang Tua & Guru: Sejauh mana pemahaman mereka terhadap visi dan misi SDN 1 Sukahaji serta keterlibatan dalam sosialisasinya.
+Penelaahan Dokumen: Dokumen Kurikulum Operasional Satuan Pendidikan (KOSP) yang memuat visi-misi, lembar pengesahan, serta dokumentasi sosialisasi visi-misi kepada pemangku kepentingan.`,
+            driveUrl: "https://drive.google.com/drive/folders/1UqVTkcNEtE_RTD5ADpRZKdWNAeJjOrgg?usp=drive_link"
+          },
+          {
+            id: "6.2",
+            indikator: "Adanya kolaborasi atau kemitraan dengan berbagai pihak (termasuk orang tua/wali, mitra, dudi, dst) dalam rangka mendukung penyelenggaraan layanan pendidikan secara efektif",
+            data: `Wawancara Perwakilan Mitra: Bentuk kerja sama, kontribusi, dan keterlibatan aktif mitra dalam mendukung program sekolah.
+Wawancara Orang Tua/Komite: Peran aktif Komite Sekolah (Bpk. Endin Sahrudin, S.Pd.) dan orang tua dalam mendukung kegiatan sekolah.
+Penelaahan Dokumen: Nota Kesepahaman (MoU) / dokumen kerja sama dengan mitra strategis, laporan kegiatan kolaborasi, serta dokumentasi kegiatan bersama instansi terkait.`,
+            driveUrl: "https://drive.google.com/drive/folders/1PoTkaoajLAnXcexAiONZRsUxxaQMb2If?usp=drive_link"
+          },
+          {
+            id: "6.3",
+            indikator: "Pelaksanaan evaluasi/refleksi berbasis data yang melibatkan berbagai pihak yang relevan",
+            data: `Wawancara Kepala Sekolah & Guru: Mekanisme pelibatan warga sekolah dan orang tua dalam proses evaluasi berbasis Rapor Pendidikan.
+Wawancara Orang Tua/Komite: Pengalaman dan bentuk keterlibatan langsung dalam proses refleksi atau evaluasi data sekolah.
+Penelaahan Dokumen: Dokumen Perencanaan Berbasis Data (PBD), lembar kerja/notula lokakarya evaluasi Rapor Pendidikan, serta daftar hadir pelibatan pemangku kepentingan.`,
+            driveUrl: "https://drive.google.com/drive/folders/10yeovfP88S8D0aV1Rw9jFc3uGRRSxjwV?usp=drive_link"
+          },
+          {
+            id: "6.4",
+            indikator: "Perencanaan kegiatan tahunan dilakukan berdasarkan data yang diperoleh dari evaluasi/refleksi.",
+            data: `Wawancara Kepala Sekolah & Bendahara/Tim Pengembang Sekolah: Proses penyusunan perencanaan tahunan (RKT/RKAS) yang mengacu pada hasil refleksi dan Rapor Pendidikan.
+Penelaahan Dokumen: Dokumen Rencana Kerja Tahunan (RKT), Rencana Kegiatan dan Anggaran Sekolah (RKAS), serta rekam jejak penyusunan program tahunan yang berbasis data evaluasi.`,
+            driveUrl: "https://drive.google.com/drive/folders/1Yy7Rx0f1ntxChSrRvo6kmLD5yHiEvo4m?usp=drive_link"
+          }
+        ]
+      },
+      {
+        butirNumber: 7,
+        butirTitle: "Butir 7.",
+        butirDesc: "Kepala satuan pendidikan memastikan pengelolaan anggaran dilakukan sesuai perencanaan berdasarkan refleksi yang berbasis data secara transparan dan akuntabel.",
+        indicators: [
+          {
+            id: "7.1",
+            indikator: "Anggaran sekolah dikelola sesuai dengan perencanaan tahunan",
+            data: `Wawancara Kepala Sekolah & Tim BOS: Kesesuaian pelaksanaan anggaran di lapangan dengan perencanaan tahunan yang tertuang dalam ARKAS 2026.
+Wawancara Guru/Komite: Keterlibatan pemangku kepentingan dalam memonitor kesesuaian realisasi anggaran dengan program yang direncanakan.
+Penelaahan Dokumen: Dokumen Rencana Kerja Tahunan (RKT), Rencana Kegiatan dan Anggaran Sekolah (RKAS / ARKAS 2026), serta laporan realisasi penggunaan dana BOSP.`,
+            driveUrl: "https://drive.google.com/drive/folders/1Go5jL_u-ACF6sfN5mGc77pdtAqX64HsD?usp=drive_link"
+          },
+          {
+            id: "7.2",
+            indikator: `Rencana anggaran sekolah 
+menunjukkan sumber pendanaan serta alokasi pemanfaatannya`,
+            data: `Wawancara Bendahara BOS / Kepala Sekolah: Transparansi sumber pendanaan dan rincian alokasi pemanfaatan anggaran dalam dokumen perencanaan.
+Penelaahan Dokumen: Lembar Rencana Kegiatan dan Anggaran Sekolah (RKAS) yang memuat rincian sumber dana (BOSP), pos-pos belanja, serta proporsi alokasi peningkatan mutu dan belanja SIPLah.`,
+            driveUrl: "https://drive.google.com/drive/folders/1pnHh4YTBCfjbw00pH5p5QJSw67GBnmzo?usp=drive_link"
+          },
+          {
+            id: "7.3",
+            indikator: "Ada laporan berkala tentang pemanfaatan anggaran sekolah kepada pemangku kepentingan",
+            data: `Wawancara Komite Sekolah & Orang Tua: Keterbukaan informasi dan perolehan laporan berkala terkait pemanfaatan anggaran sekolah dari pihak kepala sekolah/bendahara.
+Penelaahan Dokumen: Bukti pelaporan dana BOS (platform ARKAS/SDS), dokumentasi publikasi laporan keuangan di papan informasi sekolah, notula rapat komite, serta daftar hadir sosialisasi anggaran kepada orang tua/wali murid.`,
+            driveUrl: "https://drive.google.com/drive/folders/1_6_3MDzY0-q7R2auQiZ5u2VVTEZ_FfpN?usp=drive_link"
+          }
+        ]
+      },
+      {
+        butirNumber: 8,
+        butirTitle: "Butir 8.",
+        butirDesc: "Kepala satuan pendidikan memimpin pengelolaan sarana dan prasarana sesuai dengan kebutuhan pembelajaran yang berpusat pada peserta didik.",
+        indicators: [
+          {
+            id: "8.1",
+            indikator: "Pemenuhan sarana dan prasarana yang sesuai dengan kebutuhan belajar murid (dapat disediakan secara mandiri maupun bermitra)",
+            data: `Wawancara Kepala Sekolah & Guru: Perencanaan dan pemenuhan sarana prasarana yang disesuaikan dengan kebutuhan pembelajaran berdampak pada murid. 
+Observasi Lingkungan Belajar: Pemeriksaan langsung kondisi fisik ruang kelas, perpustakaan, toilet, sumber air bersih, serta kelayakan fasilitas pendukung lainnya. 
+Penelaahan Dokumen: Data pokok pendidikan (Dapodik), RKT dan RKAS 2026, serta dokumen perencanaan pemenuhan sarana dan prasarana sekolah.`,
+            driveUrl: "https://drive.google.com/drive/folders/1R2VwZnp4daVqFw7IJiexLOEl-4jB68I7?usp=drive_link"
+          },
+          {
+            id: "8.2",
+            indikator: "Pengelolaan sarana dan prasarana secara optimal",
+            data: `Observasi: Pemanfaatan sarana prasarana secara langsung di kelas (seperti penggunaan Chromebook, IFP, TV Digital, pojok baca, dan alat peraga) saat kegiatan belajar mengajar. 
+Wawancara Murid & Guru: Kenyamanan, frekuensi pemanfaatan, dan perawatan fasilitas belajar sehari-hari di sekolah. 
+Penelaahan Dokumen: Buku inventaris barang/sarpras sekolah, kartu pemeliharaan/perawatan sarana, serta bukti pencatatan inventaris dalam sistem Dapodik.`,
+            driveUrl: "https://drive.google.com/drive/folders/1ob5tza3i8ThP5yR-gGJThm5mhqmgCWhq?usp=drive_link"
+          }
+        ]
+      },
+      {
+        butirNumber: 9,
+        butirTitle: "Butir 9.",
+        butirDesc: "Kepala satuan pendidikan mengembangkan kurikulum di tingkat satuan pendidikan yang selaras dengan kurikulum nasional.",
+        indicators: [
+          {
+            id: "9.1",
+            indikator: "Kepemilikan kurikulum satuan pendidikan sebagai rujukan penyelenggaraan proses pembelajaran",
+            data: `Wawancara Kepala Sekolah & Tim Pengembang Kurikulum: Proses penyusunan, legalitas pengesahan, dan penggunaan KSP sebagai rujukan utama pembelajaran di sekolah.
+Penelaahan Dokumen: Dokumen lengkap Kurikulum Satuan Pendidikan (KSP) Tahun Ajaran 2026/2027, lembar pengesahan, dan SK penetapan kurikulum.`,
+            driveUrl: "https://drive.google.com/drive/folders/15NVodyaExuP-PGE85l_VuJUtWU9rcMfI?usp=drive_link"
+          },
+          {
+            id: "9.2",
+            indikator: "Adanya mekanisme evaluasi terhadap penerapan kurikulum",
+            data: `Wawancara Guru & Kepala Sekolah: Mekanisme, waktu pelaksanaan, dan tindak lanjut dari evaluasi berkala terhadap penerapan kurikulum di kelas.
+Penelaahan Dokumen: Catatan/notula hasil evaluasi kurikulum berkala, instrumen monitoring penerapan kurikulum, serta laporan pelaksanaan program intrakurikuler dan kokurikuler.`,
+            driveUrl: "https://drive.google.com/drive/folders/1_Ff-sMYSiDWwk0EbZIOhZH_B6Jp0P9i7?usp=drive_link"
+          },
+          {
+            id: "9.3",
+            indikator: "Kurikulum satuan pendidikan relevan dengan kebutuhan belajar murid dan visi misi sekolah",
+            data: `Wawancara Komite Sekolah & Orang Tua: Keterlibatan pemangku kepentingan dalam memastikan kurikulum merespons kebutuhan belajar murid dan visi misi sekolah.
+Wawancara Guru: Relevansi isi KSP dengan karakteristik peserta didik dan potensi lokal Desa Sukahaji.
+Penelaahan Dokumen: Bagian analisis karakteristik satuan pendidikan dalam dokumen KSP, serta keselarasan muatan lokal dan program pilihan dengan visi-misi sekolah.`,
+            driveUrl: "https://drive.google.com/drive/folders/1rJ4z_bfS5S_rylHL_X_CVRRzkOjLtmG9?usp=drive_link"
+          }
+        ]
+      },
+      {
+        butirNumber: 10,
+        butirTitle: "Butir 10.",
+        butirDesc: "Satuan pendidikan memastikan terbangunnya iklim kebinekaan bagi peserta didik, pendidik, dan tenaga kependidikan.",
+        indicators: [
+          {
+            id: "10.1",
+            indikator: "Iklim lingkungan belajar membangun sikap positif terhadap keberagaman",
+            data: `Observasi: Suasana interaksi di lingkungan sekolah, pemanfaatan media/alat peraga pembelajaran yang mencerminkan nilai keberagaman, serta pelaksanaan kegiatan belajar yang inklusif. 
+Wawancara Murid & Guru: Pemahaman warga sekolah mengenai pentingnyasikap positif terhadap keberagaman Nusantara meskipun latar belakang murid cenderung seragam. 
+Penelaahan Dokumen: Perangkat pembelajaran (Modul Ajar Pendidikan Pancasila, IPAS, Seni Budaya), dokumentasi kegiatan PHBN, serta laporan program benahi pelatihan guru terkait toleransi.`,
+            driveUrl: "https://drive.google.com/drive/folders/1SljQYgwAOabCEu9U0dajdMFGIwI_Vzkv?usp=drive_link"
+          },
+          {
+            id: "10.2",
+            indikator: "Iklim lingkungan belajar yang memfasilitasi hak sipil warga untuk beribadah dan berbudaya",
+            data: `Wawancara Kepala Sekolah & Guru: Kebijakan operasional sekolah dalam mencegah intoleransi serta menjamin hak sipil dan kebebasan beribadah/berbudaya. 
+Wawancara Orang Tua: Persepsi orang tua terhadap suasana sekolah yang aman, toleran, dan bebas dari tindakan diskriminasi keagamaan maupun kebudayaan. 
+Penelaahan Dokumen: SOP atau tata tertib sekolah terkait pencegahan intoleransi, tata kelola kegiatan keagamaan, serta dokumentasi kegiatan budaya di sekolah.`,
+            driveUrl: "https://drive.google.com/drive/folders/19tj5v8qI2-gKKJqkeiUOMDiwmcsXx3iC?usp=drive_link"
+          },
+          {
+            id: "10.3",
+            indikator: "Iklim lingkungan belajar membangun kesadaran terhadap kesetaraan gender",
+            data: `Observasi: Praktik pengajaran di kelas yang memberikan kesempatan setara bagi murid laki-laki dan perempuan dalam memimpin kelompok, menjawab pertanyaan, maupun menjalankan tugas piket. 
+Wawancara Murid: Pengalaman mereka dalam mendapatkan perlakuan dan kesempatan yang adil serta setara tanpa membedakan gender. 
+Penelaahan Dokumen: Buku teks/modul pembelajaran yang digunakan apakah sudah bebas dari stereotip gender, serta struktur kepengurusan kelas atau kelompok belajar yang partisipatif.`,
+            driveUrl: "https://drive.google.com/drive/folders/1ZFBu0oi97knah80VHyVERic4CzpA9Jo3?usp=drive_link"
+          }
+        ]
+      },
+      {
+        butirNumber: 11,
+        butirTitle: "Butir 11.",
+        butirDesc: "Satuan pendidikan menyediakan lingkungan belajar yang inklusif untuk memenuhi kebutuhan belajar peserta didik yang beragam.",
+        indicators: [
+          {
+            id: "11.1",
+            indikator: "Kebijakan dan/atau prosedur yang menghadirkan lingkungan belajar yang inklusif",
+            data: `Wawancara Kepala Sekolah & Guru: Kebijakan dan prosedur operasional standar (SOP) yang diterapkan sekolah dalam memberikan layanan pendidikan inklusif. 
+Penelaahan Dokumen: Dokumen KSP 2026/2027 khususnya Bab III mengenai Program Inklusif, serta data pokok peserta didik berkebutuhan khusus/bakat istimewa di sekolah.`,
+            driveUrl: "https://drive.google.com/drive/folders/1fasDUyPXM2Xwa6nfq1BBRxxRhsDlBPSj?usp=sharing"
+          },
+          {
+            id: "11.2",
+            indikator: "Program bagi guru, orang tua/wali, dan murid untuk menghadirkan lingkungan belajar yang inklusif",
+            data: `Observasi: Pelaksanaan pembelajaran berdiferensiasi dan penyesuaian proses belajar di kelas yang mengakomodasi keragaman kebutuhan peserta didik. 
+Wawancara Guru: Pengalaman dan strategi dalam menyusun PPI serta memberikan modifikasi pembelajaran bagi siswa lamban belajar atau cerdas istimewa. 
+Wawancara Orang Tua: Keterlibatan orang tua dalam asesmen diagnostik awal, penyusunan PPI, serta evaluasi berkala program inklusif anak. 
+Penelaahan Dokumen: Dokumen Program Pembelajaran Individual (PPI), instrumen asesmen diagnostik, catatan modifikasi Modul Ajar, serta notula hasil evaluasi bersama orang tua.`,
+            driveUrl: "https://drive.google.com/drive/folders/1QmTDEpkRaTrAUaBdVBz2975v7C7UU_bL?usp=drive_link"
+          }
+        ]
+      },
+      {
+        butirNumber: 12,
+        butirTitle: "Butir 12.",
+        butirDesc: "Satuan pendidikan mewujudkan iklim lingkungan belajar yang aman secara psikis bagi peserta didik, pendidik, dan tenaga kependidikan.",
+        indicators: [
+          {
+            id: "12.1",
+            indikator: "Kebijakan dalam pencegahan dan penanganan perundungan dan kekerasan.",
+            data: `Wawancara Kepala Sekolah & Anggota TPPK: Kebijakan operasional, pembentukan TPPK, dan penerapan SOP pencegahan serta penanganan kekerasan di lingkungan sekolah.  
+Penelaahan Dokumen: SK Pembentukan TPPK, dokumen tata tertib ramah anak, SOP pencegahan/penanganan perundungan dan kekerasan, serta rekam jejak kebijakan sekolah.`,
+            driveUrl: "https://drive.google.com/drive/folders/1nUc6EQajjmn1dt31TpuNvdpJsYAUFASE?usp=drive_link"
+          },
+          {
+            id: "12.2",
+            indikator: "Program bagi warga sekolah/madrasah dalam pencegahan dan penanganan perundungan dan kekerasan",
+            data: `Observasi: Kondisi lingkungan sekolah yang kondusif, aman secara psikis, serta keterpaparan informasi/papan layanan pengaduan kekerasan. 
+Wawancara Guru & Murid: Pemahaman warga sekolah terhadap mekanisme pengaduan kekerasan dan program pencegahan yang telah berjalan. 
+Penelaahan Dokumen: Dokumentasi/laporan kegiatan sosialisasi anti-kekerasan bersama mitra (Polsek/Koramil/Puskesmas), modul penguatan kapasitas guru lewat Kombel Sahakarya, serta catatan mekanisme layanan pengaduan.`,
+            driveUrl: "https://drive.google.com/drive/folders/1UZIvWJ3KD2jvlAqH6E72jhD_syA0ZY_u?usp=drive_link"
+          }
+        ]
+      },
+      {
+        butirNumber: 13,
+        butirTitle: "Butir 13.",
+        butirDesc: "Satuan pendidikan memastikan keselamatan peserta didik, pendidik, dan tenaga kependidikan.",
+        indicators: [
+          {
+            id: "13.1",
+            indikator: "Iklim lingkungan belajar yang menjaga keselamatan warga sekolah/madrasah",
+            data: `Observasi: Kondisi fisik lingkungan sekolah, kelayakan bangunan, jalur evakuasi, serta kebersihan dan keamanan sarana pendukung (listrik, saluran air). 
+Wawancara Kepala Sekolah & Guru: Upaya rutin yang dilakukan dalam memelihara keamanan dan keselamatan fisik lingkungan belajar. 
+Penelaahan Dokumen: Program kerja pemeliharaan sarana prasarana serta laporan pemantauan kondisi lingkungan sekolah.`,
+            driveUrl: "https://drive.google.com/drive/folders/15VbcnTHvQx5CGHA4lv8DDc5uc-uogwRE?usp=drive_link"
+          },
+          {
+            id: "13.2",
+            indikator: "Kesiapan dalam pemberian Pertolongan Pertama pada Kecelakaan (P3K)",
+            data: `Observasi: Pemeriksaan langsung kelengkapan isi Kotak P3K di UKS dan ketersediaan fasilitas penunjang darurat di lingkungan sekolah.
+Wawancara Guru / Pengelola UKS: Pemahaman dan keterampilan penanganan darurat serta mekanisme pemberian pertolongan pertama pada kecelakaan. 
+Penelaahan Dokumen: Daftar inventaris isi kotak P3K, jadwal pengecekan berkala, serta catatan penggunaan layanan UKS.`,
+            driveUrl: "https://drive.google.com/drive/folders/1KbHXH44aZ3Hhj1xIGo2IyIgUbKI9OR3F?usp=drive_link"
+          },
+          {
+            id: "13.3",
+            indikator: "Kesiapan sekolah/madrasah dalam menghadapi ragam potensi bencana",
+            data: `Observasi: Keberadaan rambu evakuasi, peta/denah jalur evakuasi, titik kumpul yang jelas, serta penempatan APAR di titik strategis.
+Wawancara Guru & Murid: Pemahaman prosedur evakuasi dan tindakan yang harus dilakukan saat terjadi bencana. 
+Penelaahan Dokumen: Dokumen SOP Keadaan Darurat, dokumentasi foto/video pelaksanaan simulasi evakuasi bencana, serta dokumen kerja sama (MoU/surat koordinasi) dengan BPBD, Damkar, Puskesmas, dan instansi terkait.`,
+            driveUrl: "https://drive.google.com/drive/folders/1V3GaDQ3tX2xZaOdbZFJUEZ5zyA1IalIB?usp=drive_link"
+          }
+        ]
+      },
+      {
+        butirNumber: 14,
+        butirTitle: "Butir 14.",
+        butirDesc: "Satuan pendidikan menjamin lingkungan yang sehat dan memiliki/melaksanakan program yang membangun kesehatan fisik dan mental pada peserta didik, pendidik, dan tenaga kependidikan",
+        indicators: [
+          {
+            id: "14.1",
+            indikator: "Iklim lingkungan belajar membangun pola hidup bersih dan sehat",
+            data: `Observasi: Kondisi kebersihan lingkungan sekolah, ketersediaan air bersih, fasilitas toilet yang memenuhi standar (tempat sampah tertutup, cermin), tempat cuci tangan dengan sabun, TPS tertutup, serta media KIE di berbagai sudut sekolah. 
+Wawancara Murid & Guru: Konsistensi pelaksanaan pembiasaan PHBS dan kegiatan CTPS berkelompok dalam keseharian.
+Penelaahan Dokumen: Program kerja UKS, jadwal piket kebersihan, catatan kegiatan kerja sama dengan Puskesmas Cihaurbeuti, serta dokumentasi pelaksanaan program kesehatan.`,
+            driveUrl: "https://drive.google.com/drive/folders/1O0XZVSU3fszWvUrsToj94XvBc1BEtj9l?usp=drive_link"
+          },
+          {
+            id: "14.2",
+            indikator: "Program untuk membangun kesehatan mental pada murid, guru, dan tenaga kependidikan",
+            data: `Wawancara Guru & Murid: Pengalaman dan pemahaman terkait adanya layanan atau dukungan kesehatan mental di lingkungan sekolah.
+Wawancara Kepala Sekolah: Kebijakan dan bentuk perhatian institusi terhadap kesejahteraan mental pendidik dan tenaga kependidikan. 
+Penelaahan Dokumen: Rekam jejak atau modul program bimbingan konseling, dokumentasi kegiatan penyuluhan kesehatan mental, serta catatan layanan pendampingan psikologis sekolah.`,
+            driveUrl: "https://drive.google.com/drive/folders/1kYPdW_1Vhbs1JkfW-CAdNg4KpYLh28WJ?usp=drive_link"
+          },
+          {
+            id: "14.3",
+            indikator: "Edukasi tentang pencegahan adiksi dan kesehatan reproduksi",
+            data: `Wawancara Murid: Pemahaman mereka mengenai bahaya rokok, miras, narkoba, pentingnya bijak ber-gawai, serta pengetahuan dasar kesehatan reproduksi.
+Wawancara Guru/Tim Pembina: Metode penyampaian materi pencegahan adiksi dan edukasi kesehatan reproduksi di kelas atau kegiatan ekstrakurikuler. 
+Penelaahan Dokumen: Materi ajar/modul terkait pencegahan rokok, narkoba, edukasi gawai, serta modul kesehatan reproduksi/pubertas yang diintegrasikan dalam pembelajaran.`,
+            driveUrl: "https://drive.google.com/drive/folders/1wMxGm_wLDxlfxd37b-opEqkDCp1XZVu2?usp=drive_link"
+          }
+        ]
+      }
+    ];
+
+    // State Aplikasi
+    let activeButirFilter = 'all';
+    let checkedIndicators = JSON.parse(localStorage.getItem('sdn1sukahaji_akreditasi2026_checked') || '{}');
+    let collapsedButirs = {};
+
+    const totalIndicatorsCount = accreditationData.reduce((acc, b) => acc + b.indicators.length, 0);
+
+    // Escape HTML untuk keamanan
+    function escapeHtml(str) {
+      return str.replace(/[&<>"']/g, function(m) {
+        return ({
+          '&': '&amp;',
+          '<': '&lt;',
+          '>': '&gt;',
+          '"': '&quot;',
+          "'": '&#039;'
+        })[m];
+      });
+    }
+
+    // Highlight kata kunci pencarian tanpa mengubah teks asli
+    function highlightText(text, query) {
+      const safeText = escapeHtml(text);
+      if (!query || !query.trim()) return safeText;
+      const escapedQuery = query.trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const regex = new RegExp(`(${escapedQuery})`, 'gi');
+      return safeText.replace(regex, '<mark class="highlight">$1</mark>');
+    }
+
+    // Format tampilan "Data yang perlu dikumpulkan saat visitasi" dengan badge visual tanpa mengubah satu huruf pun dari teks asli
+    function formatDataText(rawText, query) {
+      let formatted = highlightText(rawText, query);
+
+      // Beri penekanan visual pada label metode penggalian data (Observasi, Wawancara, Penelaahan Dokumen)
+      const labels = [
+        { pattern: /(Observasi Lingkungan Belajar:)/g, cls: "bg-sky-100 text-sky-900 border-sky-300", icon: "fa-eye" },
+        { pattern: /(Observasi:)/g, cls: "bg-sky-100 text-sky-900 border-sky-300", icon: "fa-eye" },
+        { pattern: /(Wawancara[^:\n]*:)/g, cls: "bg-amber-100 text-amber-900 border-amber-300", icon: "fa-comments" },
+        { pattern: /(Penelaahan Dokumen:)/g, cls: "bg-emerald-100 text-emerald-900 border-emerald-300", icon: "fa-file-lines" }
+      ];
+
+      labels.forEach(item => {
+        formatted = formatted.replace(
+          item.pattern,
+          `<span class="inline-flex items-center gap-1.5 font-extrabold text-xs px-2.5 py-0.5 rounded-md border ${item.cls} mr-1 mt-1"><i class="fa-solid ${item.icon}"></i>$1</span>`
+        );
+      });
+
+      return formatted;
+    }
+
+    // Render tombol pil Butir 1 - 14
+    function renderButirPills() {
+      const container = document.getElementById('butirPillsContainer');
+      let html = `
+        <button 
+          onclick="setButirFilter('all')" 
+          class="px-3.5 py-2 rounded-xl text-xs font-extrabold transition shrink-0 ${activeButirFilter === 'all' ? 'navy-gradient text-gold-400 shadow-md ring-2 ring-gold-400' : 'bg-slate-100 hover:bg-slate-200 text-slate-700'}"
+        >
+          Semua Butir (14)
+        </button>
+      `;
+
+      accreditationData.forEach(b => {
+        const isActive = activeButirFilter === b.butirNumber;
+        html += `
+          <button 
+            onclick="setButirFilter(${b.butirNumber})" 
+            class="px-3.5 py-2 rounded-xl text-xs font-extrabold transition shrink-0 ${isActive ? 'navy-gradient text-gold-400 shadow-md ring-2 ring-gold-400' : 'bg-slate-100 hover:bg-slate-200 text-slate-700'}"
+          >
+            Butir ${b.butirNumber}
+          </button>
+        `;
+      });
+
+      container.innerHTML = html;
+    }
+
+    function setButirFilter(butirNum) {
+      activeButirFilter = butirNum;
+      renderButirPills();
+      renderData();
+    }
+
+    function clearSearch() {
+      const input = document.getElementById('searchInput');
+      input.value = '';
+      document.getElementById('clearSearchBtn').classList.add('hidden');
+      renderData();
+    }
+
+    function resetAllFilters() {
+      activeButirFilter = 'all';
+      document.getElementById('searchInput').value = '';
+      document.getElementById('statusFilter').value = 'all';
+      document.getElementById('clearSearchBtn').classList.add('hidden');
+      renderButirPills();
+      renderData();
+    }
+
+    function toggleCheckIndicator(id) {
+      if (checkedIndicators[id]) {
+        delete checkedIndicators[id];
+      } else {
+        checkedIndicators[id] = true;
+      }
+      localStorage.setItem('sdn1sukahaji_akreditasi2026_checked', JSON.stringify(checkedIndicators));
+      updateProgressUI();
+      renderData();
+    }
+
+    function resetChecklist() {
+      if (Object.keys(checkedIndicators).length === 0) return;
+      if (confirm('Apakah Anda yakin ingin mereset semua tanda "Sudah Ditelaah"?')) {
+        checkedIndicators = {};
+        localStorage.removeItem('sdn1sukahaji_akreditasi2026_checked');
+        updateProgressUI();
+        renderData();
+      }
+    }
+
+    function updateProgressUI() {
+      const checkedCount = Object.keys(checkedIndicators).length;
+      const pct = Math.round((checkedCount / totalIndicatorsCount) * 100);
+      document.getElementById('navProgressText').textContent = `${checkedCount} / ${totalIndicatorsCount} Indikator (${pct}%)`;
+      document.getElementById('navProgressBar').style.width = `${pct}%`;
+      document.getElementById('statCheckedCount').textContent = `${checkedCount} / ${totalIndicatorsCount} Selesai`;
+    }
+
+    function toggleButirCollapse(butirNum) {
+      collapsedButirs[butirNum] = !collapsedButirs[butirNum];
+      renderData();
+    }
+
+    function toggleAllButir(expand) {
+      accreditationData.forEach(b => {
+        collapsedButirs[b.butirNumber] = !expand;
+      });
+      renderData();
+    }
+
+    // Render Daftar Butir & Indikator
+    function renderData() {
+      const query = document.getElementById('searchInput').value.trim();
+      const statusFilter = document.getElementById('statusFilter').value;
+      const container = document.getElementById('butirContainer');
+      const emptyState = document.getElementById('emptyState');
+
+      let shownButirs = 0;
+      let shownIndicators = 0;
+      let html = '';
+
+      accreditationData.forEach(butir => {
+        if (activeButirFilter !== 'all' && butir.butirNumber !== activeButirFilter) {
+          return;
+        }
+
+        const butirMatchQuery = !query || 
+          butir.butirTitle.toLowerCase().includes(query.toLowerCase()) ||
+          butir.butirDesc.toLowerCase().includes(query.toLowerCase());
+
+        const filteredIndicators = butir.indicators.filter(ind => {
+          const isChecked = !!checkedIndicators[ind.id];
+          if (statusFilter === 'checked' && !isChecked) return false;
+          if (statusFilter === 'unchecked' && isChecked) return false;
+
+          if (!query) return true;
+          if (butirMatchQuery) return true;
+
+          const q = query.toLowerCase();
+          return (
+            ind.indikator.toLowerCase().includes(q) ||
+            ind.data.toLowerCase().includes(q)
+          );
+        });
+
+        if (filteredIndicators.length === 0) return;
+
+        shownButirs++;
+        shownIndicators += filteredIndicators.length;
+
+        const isCollapsed = collapsedButirs[butir.butirNumber] && !query;
+        const checkedInButir = butir.indicators.filter(i => checkedIndicators[i.id]).length;
+
+        html += `
+          <section class="bg-white rounded-2xl shadow-md border border-slate-200 overflow-hidden transition">
+            <!-- Header Butir -->
+            <div 
+              onclick="toggleButirCollapse(${butir.butirNumber})"
+              class="navy-gradient text-white p-5 sm:p-6 cursor-pointer select-none border-b-4 border-gold-400 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:brightness-105 transition"
+            >
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-2xl gold-gradient text-navy-900 font-extrabold text-base sm:text-lg flex flex-col items-center justify-center shrink-0 shadow-md leading-none">
+                  <span class="text-[10px] font-bold uppercase">Butir</span>
+                  <span>${butir.butirNumber}</span>
+                </div>
+                <div>
+                  <div class="flex flex-wrap items-center gap-2 mb-1">
+                    <span class="text-xs font-extrabold uppercase tracking-wider text-gold-400">${highlightText(butir.butirTitle, query)}</span>
+                    <span class="text-[11px] bg-white/15 px-2.5 py-0.5 rounded-full text-slate-200 font-semibold">
+                      ${filteredIndicators.length} Indikator
+                    </span>
+                    <span class="text-[11px] bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 px-2.5 py-0.5 rounded-full font-semibold">
+                      ${checkedInButir}/${butir.indicators.length} Ditelaah
+                    </span>
+                  </div>
+                  <h3 class="text-base sm:text-lg font-bold text-white leading-snug">
+                    ${highlightText(butir.butirDesc, query)}
+                  </h3>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-end gap-2 shrink-0">
+                <span class="text-xs text-gold-300 font-semibold sm:hidden">
+                  ${isCollapsed ? 'Tampilkan Indikator' : 'Sembunyikan'}
+                </span>
+                <div class="w-9 h-9 rounded-xl bg-white/10 flex items-center justify-center text-gold-400">
+                  <i class="fa-solid ${isCollapsed ? 'fa-chevron-down' : 'fa-chevron-up'}"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Body Daftar Indikator -->
+            <div class="${isCollapsed ? 'hidden' : 'block'} divide-y divide-slate-200 bg-slate-50/50 p-4 sm:p-6 space-y-4">
+              ${filteredIndicators.map((ind, idx) => {
+                const isChecked = !!checkedIndicators[ind.id];
+                return `
+                  <div class="card-hover bg-white rounded-xl border ${isChecked ? 'border-emerald-400 bg-emerald-50/20' : 'border-slate-200'} p-5 shadow-sm">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start">
+                      
+                      <!-- Kolom Indikator (4 Kolom) -->
+                      <div class="lg:col-span-4 space-y-2">
+                        <div class="flex items-center justify-between gap-2">
+                          <span class="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-lg bg-navy-800 text-gold-400">
+                            <i class="fa-solid fa-bullseye"></i> Indikator ${ind.id}
+                          </span>
+                          ${isChecked ? `
+                            <span class="inline-flex items-center gap-1 text-xs font-bold text-emerald-700 bg-emerald-100 px-2.5 py-0.5 rounded-full">
+                              <i class="fa-solid fa-circle-check"></i> Sudah Ditelaah
+                            </span>
+                          ` : ''}
+                        </div>
+                        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 pt-1">Indikator:</div>
+                        <h4 class="text-sm sm:text-base font-extrabold text-navy-900 leading-relaxed whitespace-pre-line">${highlightText(ind.indikator, query)}</h4>
+                      </div>
+
+                      <!-- Kolom Data yang perlu dikumpulkan saat visitasi (5 Kolom) -->
+                      <div class="lg:col-span-5 bg-slate-50 rounded-xl p-4 border border-slate-200/80">
+                        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2 flex items-center gap-1.5">
+                          <i class="fa-solid fa-clipboard-list text-navy-700"></i>
+                          <span>Data yang perlu dikumpulkan saat visitasi:</span>
+                        </div>
+                        <div class="text-xs sm:text-sm text-slate-700 leading-relaxed whitespace-pre-line">${formatDataText(ind.data, query)}</div>
+                      </div>
+
+                      <!-- Kolom Aksi Direct Google Drive & Checklist (3 Kolom) -->
+                      <div class="lg:col-span-3 flex flex-col justify-between gap-3 h-full">
+                        <div class="space-y-2.5">
+                          <a 
+                            href="${ind.driveUrl}" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            class="w-full gold-gradient hover:brightness-105 text-navy-900 font-extrabold text-xs sm:text-sm py-3.5 px-4 rounded-xl shadow-md hover:shadow-lg transition flex items-center justify-center gap-2 text-center"
+                          >
+                            <i class="fa-brands fa-google-drive text-base"></i>
+                            <span>Buka Folder Eviden</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-80"></i>
+                          </a>
+
+                          <button 
+                            onclick="toggleCheckIndicator('${ind.id}')"
+                            class="w-full py-2.5 px-3 rounded-xl border text-xs font-bold transition flex items-center justify-center gap-2 ${
+                              isChecked 
+                                ? 'bg-emerald-600 text-white border-emerald-600 hover:bg-emerald-700' 
+                                : 'bg-white text-slate-600 border-slate-300 hover:bg-slate-100'
+                            }"
+                          >
+                            <i class="fa-solid ${isChecked ? 'fa-square-check' : 'fa-regular fa-square'} text-sm"></i>
+                            <span>${isChecked ? 'Ditandai Sudah Ditelaah' : 'Tandai Sudah Ditelaah'}</span>
+                          </button>
+                        </div>
+
+                        <div class="pt-1 text-[11px] text-slate-400 truncate flex items-center gap-1.5" title="${ind.driveUrl}">
+                          <i class="fa-solid fa-link text-slate-400"></i>
+                          <span class="truncate">${ind.driveUrl}</span>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          </section>
+        `;
+      });
+
+      container.innerHTML = html;
+      document.getElementById('resultCounter').textContent = `Menampilkan ${shownButirs} Butir (${shownIndicators} Indikator)`;
+
+      if (shownIndicators === 0) {
+        emptyState.classList.remove('hidden');
+      } else {
+        emptyState.classList.add('hidden');
+      }
+    }
+
+    // Event Listeners
+    document.getElementById('searchInput').addEventListener('input', function(e) {
+      const clearBtn = document.getElementById('clearSearchBtn');
+      if (e.target.value.trim().length > 0) {
+        clearBtn.classList.remove('hidden');
+      } else {
+        clearBtn.classList.add('hidden');
+      }
+      renderData();
+    });
+
+    window.addEventListener('scroll', function() {
+      const btn = document.getElementById('backToTopBtn');
+      if (window.scrollY > 400) {
+        btn.classList.remove('hidden');
+        btn.classList.add('flex');
+      } else {
+        btn.classList.add('hidden');
+        btn.classList.remove('flex');
+      }
+    });
+
+    // Inisialisasi Halaman
+    renderButirPills();
+    updateProgressUI();
+    renderData();
+  </script>
+</body>
+</html>
